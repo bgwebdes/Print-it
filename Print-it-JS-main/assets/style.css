@@ -122,9 +122,41 @@ header {
 	object-position: center;
 }
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+
+.caption {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 30px;
+}
+
+.elements{
+    display: flex;
+    transition: 1s linear;
+}
+
+.element{
+    flex: 1 0 100%;
+    position: relative;
+}
+
+.element > img{
+    width: 100%;
+}
+
+
 /* Gestion des fleches du carrousel */
 #banner .arrow {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
 }
 #banner .arrow_left {
 	left: 10px;
