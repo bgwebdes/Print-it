@@ -20,18 +20,6 @@ const slides = [
 //déclaration du numéro de la première image déclarée à l'index 0 dans le tableau
 let numeroImage = 0;
 
-//test affichage nom de l'image dans la console (non fonctionnel)
-let cetteImage = "image";
-
-
-for (let i = 0; i < slides.length; i++) {
-	console.log(slides[i]);
-}
-
-for (let image of slides) {
-	console.log('image numéro ' + numeroImage);
-	console.log(image);
-}
 
 /* DECLARATION DES CONSTANTES UTILISEES DANS LE DOM */
 
@@ -74,7 +62,6 @@ previous.addEventListener('click', function () {
 	updateDots();
 	//fonction slide précédente
 	console.log('fonction prevSlide');
-	console.log('index courante =', numeroImage);
 
 
 });
@@ -91,11 +78,8 @@ function nextSlide() {
 		// Sinon l'image courante = 0, on retourne à l'index 0 du tableau
 		numeroImage = 0;
 	}
-	if (numeroImage === slides.length - 1) {
-		alert('la dernière diapo arrive !');
-	}
+	
 	console.log('fonction nextSlide');
-	console.log('index diapo courante =', numeroImage);
 
 
 }
@@ -177,33 +161,7 @@ function updateDots() {
 
 
 
-/*
-//session mentorat 27/02/2023
-//création d'une variable pour le découpage de l'url d'une image pour ne garder que le nom + extension du fichier
-let current = image.src.split('/').pop();
 
-
-
-for (const element of slides) {
- 
-	console.log(element.image);
-
-	//comparer le nom de l'image affichée courante à l'image du tableau (index)
-	if (element.image === current) {
-		console.log('OK');
-	};
-
-	
-}
-
-
-
-console.log(tagLine);
-
-console.log(image);
-
-console.log(current);
-*/
 
 
 
