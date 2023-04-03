@@ -60,7 +60,6 @@ function prevSlide() {
 		//sinon on affiche la dernière image du tableau
 		numeroImage = slides.length - 1;
 	}
-	console.log('diapo courante =', numeroImage);
 	console.log('fonction prevSide');
 }
 
@@ -110,7 +109,7 @@ function updateDots() {
 
 	for (let i = 0; i < dots.length; i++) {
 
-		// Si i est strictement égal à l'image courante
+		// Si "i" est strictement égal à l'image courante
 		if (i === numeroImage) {
 
 			// dots[i] = syntaxe pour accéder à l'élément du tableau dots
@@ -135,9 +134,7 @@ next.addEventListener('click', function () {
 	imageUpdate();
 	textUpdate();
 	updateDots();
-	//fonction slide suivante
-	//console.log pour tester au clic
-	console.log('next arrow OK');
+
 
 
 });
@@ -148,14 +145,12 @@ next.addEventListener('click', function () {
 
 previous.addEventListener('click', function () {
 
-	//console.log pour tester au clic
-	console.log('previous arrow OK');
+	
 	prevSlide();//fonction principale qui détermine le numéro de changement d'image (à exécuter en premier)
 	imageUpdate();
 	textUpdate();
 	updateDots();
-	//fonction slide précédente
-	console.log('fonction prevSlide');
+
 
 
 });
